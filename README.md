@@ -1,18 +1,12 @@
-## Getting Started
+## About
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Welcome to my Java Swing implementation of the game 'Minesweeper'.
 
-## Folder Structure
+## Implementation
 
-The workspace contains two folders by default, where:
+My implementation includes the following classes:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- `Tile.java`: Class that represents a single tile. Stores the tile's value and methods to interact with and draw the tile.
+- `Board.java`: Class that represents the game board. Stores a 2D array of tiles, and methods to make moves, to check if the game is over, and to draw the board.
+- `GameController.java`: Class that oversees how different elements interact.
+- `GameView.java`: Class that includes the UX elements of the game. Also used to run the game.
