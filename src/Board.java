@@ -98,7 +98,7 @@ public class Board {
      * @param x -> column of tile
      */
     public void reveal(int y, int x) {
-        if (board[y][x].isRevealed() || bombHit) {
+        if (board[y][x].isRevealed() || board[y][x].isFlagged() || bombHit) {
             return;
         } else if (firstMove) {
             fillBoard(y, x);
@@ -165,7 +165,7 @@ public class Board {
         }
 
         for (int i = 0; i <= 640; i += 40) {
-            g.setColor(Color.BLACK);
+            g.setColor(Color.WHITE);
             g.drawLine(i, 0, i, 640);
             g.drawLine(0, i, 640, i);
         }

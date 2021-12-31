@@ -92,8 +92,7 @@ public class Tile {
         } else if (val > 0) {
             g.setColor(Color.LIGHT_GRAY);
             g.fillRect(x * 40, y * 40, 40, 40);
-            g.setColor(Color.BLACK);
-            g.drawString(Integer.toString(val), 40 * x + 18, 40 * y + 25);
+            drawVal(g, x, y);
         }  else if (isBomb()) {
             g.setColor(Color.RED);
             g.fillRect(x * 40, y * 40, 40, 40);
@@ -101,6 +100,31 @@ public class Tile {
             g.setColor(Color.WHITE);
             g.fillRect(x * 40, y * 40, 40, 40);
         }
+    }
+
+    /**
+     * Draws the value of the tile
+     * @param g -> graphics
+     * @param x -> x-coordinate
+     * @param y -> y-coordinate
+     */
+    public void drawVal(Graphics g, int x, int y) {
+        if (val == 1) {
+            g.setColor(new Color(0, 0, 255));
+        } else if (val == 2) {
+            g.setColor(new Color(0, 128, 0));
+        } else if (val == 3) {
+            g.setColor(new Color(255, 0, 0));
+        } else if (val == 4) {
+            g.setColor(new Color(0, 0, 128));
+        } else if (val == 5) {
+            g.setColor(new Color(128, 0, 0));
+        } else {
+            g.setColor(Color.BLACK);
+        }
+
+        g.setFont(new Font("Serif", Font.BOLD, 22));
+        g.drawString(Integer.toString(val), 40 * x + 15, 40 * y + 27);
     }
 
     /**

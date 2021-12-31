@@ -10,7 +10,7 @@ public class GameController extends JPanel {
     public GameController(JLabel status) {
         board = new Board();
         this.status = status;
-        setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
         setFocusable(true);
     
         /*
