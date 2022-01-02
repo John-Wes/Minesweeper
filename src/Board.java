@@ -45,7 +45,7 @@ public class Board {
      * @return if the user won
      */
     public boolean hasWon() {
-        return !bombHit && flags + revealed == 256;
+        return !bombHit && flags == 0 & revealed == 216;
     }
 
     /**
