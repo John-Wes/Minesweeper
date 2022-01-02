@@ -98,7 +98,7 @@ public class Board {
      * @param x -> column of tile
      */
     public void reveal(int y, int x) {
-        if (board[y][x].isRevealed() || board[y][x].isFlagged() || bombHit) {
+        if (board[y][x].isRevealed() || board[y][x].isFlagged()) {
             return;
         } else if (firstMove) {
             fillBoard(y, x);

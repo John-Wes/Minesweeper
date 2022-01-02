@@ -21,6 +21,10 @@ public class GameController extends JPanel {
             public void mouseReleased(MouseEvent e) {
                 Point p = e.getPoint();
 
+                if (board.isOver()) {
+                    return;
+                }
+
                 if (SwingUtilities.isRightMouseButton(e)) {
                     board.flag(p.y / 40, p.x / 40);
                 } else {
