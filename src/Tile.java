@@ -124,7 +124,7 @@ public class Tile {
         }
 
         g.setFont(new Font("Serif", Font.BOLD, 22));
-        g.drawString(Integer.toString(val), 40 * x + 15, 40 * y + 27);
+        g.drawString(Integer.toString(val), 40 * x + 13, 40 * y + 29);
     }
 
     /**
